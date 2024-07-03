@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <script defer src="app.js"></script>
+  <style>
+    /* Styles applied globally */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      /* Styles for the main task container element */
+      border: 5px solid black; /* Even thicker border */
+      width: 35%; /* Adjust width as needed */
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #F7CAC9; /* Light pink background color */
+    }
+
+    h3 {
+      /* Styles for the heading */
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1.5rem; /* Increase font size */
+      font-weight: bold; /* Make text bold */
+    }
+
+    form {
+      /* Styles for the task input form */
+      width: 90%;
+      border: 1px solid #ccc; /* Light gray border for better contrast */
+    }
+
+    #task-input {
+      /* Styles for the task input field */
+      width: 70%;
+      padding: 5px; /* Add some padding for better usability */
+    }
+
+    .add-btn {
+      /* Styles for the Add Task button */
+      width: calc(100% - 70%);
+      padding: 5px 10px; /* Add padding for better appearance */
+      background-color: #4CAF50; /* Green color for positive action */
+      color: white; /* Maintain white text for button */
+      border: none;
+      cursor: pointer; /* Indicate clickable element */
+    }
+
+    .task-items {
+      /* Styles for the task list */
+      list-style: none;
+      width: 90%;
+      padding: 0; /* Remove default padding */
+      margin: 1rem 0; /* Add some margin for spacing */
+    }
+
+    #search {
+      /* Styles for the search input field */
+      width: 80%;
+      padding: 5px; /* Add some padding for better usability */
+      margin: 10px 0;
+    }
+
+    .err {
+      /* Styles for the error message */
+      width: 80%;
+      display: none; /* Initially hidden */
+      background-color: #f5bebe; /* Lighter red for less severity */
+      color: black; /* Set error message text to black */
+      padding: 5px;
+      margin: 2px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Task Manager</h3>
+    <p class="err">Please enter a task</p>
+    <form>
+      <input id="task-input" type="text" placeholder="Add a task" />
+      <button class="add-btn">Add task</button>
+    </form>
+    <input type="text" id="search" placeholder="Search a task" />
+
+    <ul class="task-items"></ul>
+    <button class="clear-tasks">Clear All Tasks</button>
+  </div>
+</body>
+</html>
+

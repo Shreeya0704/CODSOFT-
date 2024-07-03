@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <script defer src="app.js"></script>
+  <style>
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Task container styles */
+    .container {
+      width: 40%; /* Adjust width as needed */
+      margin: 2rem auto;
+      border: 1px solid #ddd; /* Light gray border */
+      padding: 1rem;
+      background-color: #f5f5f5; /* Light gray background */
+    }
+
+    /* Heading styles */
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #333; /* Dark gray for heading */
+    }
+
+    /* Form styles */
+    form {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    /* Search input styles */
+    #search-input {
+      margin: 0.5rem 0;
+      width: 80%;
+      padding: 5px; /* Add some padding for better usability */
+    }
+
+    /* Error message styles */
+    .err {
+      color: #f00; /* Red for error message */
+      background-color: #ffebeb; /* Lighter red for less severity */
+      width: 80%;
+      margin: 0.5rem 0;
+      display: none;
+      padding: 5px;
+    }
+
+    /* Task list styles */
+    .task-list {
+      margin: 1rem 0;
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h3>Task Manager</h3>
+    <p class="err">Please enter a task</p>
+    <form>
+      <input id="search-input" type="text" placeholder="Search a task" />
+      <input id="task-input" type="text" placeholder="Add a task" />
+      <button class="add-btn">Add task</button>
+    </form>
+
+    <ul class="task-list"></ul>
+    <button class="clear-tasks">Clear All Tasks</button>
+  </div>
+</body>
+
+</html>
